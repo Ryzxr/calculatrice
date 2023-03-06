@@ -1,140 +1,108 @@
-body{
-    background-color: #111;
-}
-.mySlides{display: none;}
-img{vertical-align: middle;}
+ <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        corps{
+            famille de polices : 'Poppins', sans empattement ;
+            couleur de fond : noir ;
 
+        }
+        .btn{
+            position : absolue ;
+            supérieur : 65 % ;
+            gauche : 10 % ;
+            couleur de fond : rouge ;
+            Couleur blanche;
+            taille de police : 16 px ;
+            rembourrage : 16px 30px ;
+            bordure : aucune ;
+            curseur : pointeur ;
+            rayon de bordure : 10 px ;
+            aligner le texte : centrer ;
+        }
+        .btn2{
+            position : absolue ;
+            Top 1%;
+            gauche : 90 % ;
+            couleur de fond : rouge ;
+            Couleur blanche;
+            taille de police : 16 px ;
+            rembourrage : 16px 30px ;
+            bordure : aucune ;
+            curseur : pointeur ;
+            rayon de bordure : 10 px ;
+            aligner le texte : centrer ;
 
-li{
-    float: right;
-    font-family: 'Rubik', sans-serif;
-}
+        }
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-li a:hover{
-    background-color: #6457A6;
-    border-radius: 8px;
-}
+        .BigText{
+            position : absolue ;
+            haut : 30 % ;
+            gauche : 10 % ;
+            largeur : 30 % ;
+            taille de police : 300 % ;
+            Couleur blanche;
+        }
+        
+        ul{
+            type de style de liste : aucun ;
+            marge : 0 ;
+            rembourrage : 0 ;
+            débordement caché;
+            couleur de fond : transparente ;
+        }
+        li {
+            flotteur : gauche ;
+        }
+        li un {
+            bloc de visualisation;
+            Couleur blanche;
+            aligner le texte : centrer ;
+            rembourrage : 14px 16px ;
+            décoration de texte : aucune ;
+        }
+        li a:survol{
+            couleur de fond : rouge ;
+            rayon de bordure : 10 px ;
+        }
+                .arcaneimg{
+            largeur : 1850px ;
+            hauteur : 1 000 pixels ;
+        }
+        .moviesection{
+            largeur maximale : 900px ;
+            transformation de texte : majuscule ;
+            rembourrage à gauche : 10 % ;
+            Couleur blanche;
+        }
+        heure.arrondi{
+            bordure supérieure : 3 pixels rouge uni ;
+            rayon de bordure : 5 px ;
+        }
+        .movieimg .mesimages{
+            hauteur : 500px ;
+            largeur : 280 pixels ;
+        }
+        .filmimg .mesimages img{
+            largeur : 100 % ;
+            hauteur : 100 % ;
+            conforme à l'objet : couverture ;
+            rayon de bordure : 5 px ;
+        }
+        .filmimg{
+            flotteur : gauche ;
+            largeur : 30 % ;
+            rembourrage : 15px ;
+            max-width : max-contenu ;
+            rembourrage à gauche : 5 px ;
+        }
+        .moviecontainer::after{
+            contenu: "";
+            clarifier les deux;
+            affichage : tableau ;
+        }
+        .moviecontainer{
+            hauteur : contenu maximal ;
+            largeur : contenu maximal ;
+        }
 
-a {
-    display: block;
-    padding: 8px;
-    background-color: transparent;
-}
-ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: transparent;
-}
-
-.logo{
-    float : left
-}
-* {box-sizing:border-box}
-
-* {box-sizing:border-box}
-
-
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-
-.mySlides {
-  display: none;
-}
-
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: left;
-  font-family: 'Rubik', sans-serif;
-  cursor: pointer;
-  
-}
-
-
-
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-hr.rounded{
-    border-top: 3px solid #9DACFF;
-    border-radius: 5px;
-    size: 10px;
-}
-
-.trending{
-    color: white;
-    font-family: 'Rubik', sans-serif;
-
-}
-
-.column{
-    float: left;
-    width: 16.665%;
-    padding: 5px;
-    cursor: pointer;
-}
-.row::after{
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.A{
-    font-family: 'Rubik', sans-serif;
-    color: white;
-    text-align: center;
-}
+        
+    </style>
