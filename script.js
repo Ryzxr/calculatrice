@@ -1,38 +1,42 @@
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
+const generateBtn = document.getElementById('generate');
+const passwordEl = document.getElementById('password');
 
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
+generateBtn.addEventListener('click', () => {
+  const length = document.getElementById('length').value;
+  const uppercase = document.getElementById('uppercase').checked;
+  const lowercase = document.getElementById('lowercase').checked;
+  const numbers = document.getElementById('numbers').checked;
+  const symbols = document.getElementById('symbols').checked;
 
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
+  const password = generatePassword(length, uppercase, lowercase, numbers, symbols);
 
-input[type="number"], input[type="checkbox"] {
-  margin-bottom: 10px;
-}
+  passwordEl.textContent = password;
+});
 
-button {
-  margin-top: 10px;
-  padding: 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+function generatePassword(length, uppercase, lowercase, numbers, symbols) {
+  let chars = '';
 
-p#password {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-top: 20px;
+  if (uppercase) {
+    chars += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  }
+
+  if (lowercase) {
+    chars += 'abcdefghijklmnopqrstuvwxyz';
+  }
+
+  if (numbers) {
+    chars += '0123456789';
+  }
+
+  if (symbols) {
+    chars += '!@#$%^&*()_+';
+  }
+
+  let password = '';
+
+  for (let i = 0; i < length; i++) {
+    password += chars[Math.floor(Math.random() * chars.length)];
+  }
+
+  return password;
 }
