@@ -1,22 +1,38 @@
-let displayValue = '';
-
-function addToDisplay(value) {
-	displayValue += value;
-	document.getElementById('result').value = displayValue;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-function clearDisplay() {
-	displayValue = '';
-	document.getElementById('result').value = displayValue;
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
 
-function backspace() {
-	displayValue = displayValue.slice(0, -1);
-	document.getElementById('result').value = displayValue;
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
-function calculate() {
-	let result = eval(displayValue);
-	displayValue = result.toString();
-	document.getElementById('result').value = displayValue;
+input[type="number"], input[type="checkbox"] {
+  margin-bottom: 10px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+p#password {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
 }
