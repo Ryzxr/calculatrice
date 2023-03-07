@@ -1,42 +1,17 @@
-const generateBtn = document.getElementById('generate');
-const passwordEl = document.getElementById('password');
+// Tableau de citations et d'auteurs
+var quotes = [
+	{quote: "La vie est un mystère qu'il faut vivre, et non un problème à résoudre.", author: "Gandhi"},
+	{quote: "La plus grande gloire n'est pas de ne jamais tomber, mais de se relever à chaque chute.", author: "Confucius"},
+	{quote: "Le succès n'est pas la clé du bonheur. Le bonheur est la clé du succès. Si vous aimez ce que vous faites, vous réussirez.", author: "Albert Schweitzer"},
+	{quote: "La seule façon de faire du bon travail est d'aimer ce que vous faites. Si vous n'avez pas encore trouvé, continuez à chercher. N'abandonnez pas.", author: "Steve Jobs"},
+	{quote: "La vie est comme une bicyclette, il faut avancer pour ne pas perdre l'équilibre.", author: "Albert Einstein"}
+];
 
-generateBtn.addEventListener('click', () => {
-  const length = document.getElementById('length').value;
-  const uppercase = document.getElementById('uppercase').checked;
-  const lowercase = document.getElementById('lowercase').checked;
-  const numbers = document.getElementById('numbers').checked;
-  const symbols = document.getElementById('symbols').checked;
+// Fonction pour générer une citation aléatoire
+function generateQuote() {
+	var randomNumber = Math.floor(Math.random() * quotes.length);
+	var randomQuote = quotes[randomNumber];
 
-  const password = generatePassword(length, uppercase, lowercase, numbers, symbols);
-
-  passwordEl.textContent = password;
-});
-
-function generatePassword(length, uppercase, lowercase, numbers, symbols) {
-  let chars = '';
-
-  if (uppercase) {
-    chars += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  }
-
-  if (lowercase) {
-    chars += 'abcdefghijklmnopqrstuvwxyz';
-  }
-
-  if (numbers) {
-    chars += '0123456789';
-  }
-
-  if (symbols) {
-    chars += '!@#$%^&*()_+';
-  }
-
-  let password = '';
-
-  for (let i = 0; i < length; i++) {
-    password += chars[Math.floor(Math.random() * chars.length)];
-  }
-
-  return password;
+	document.getElementById("text").innerHTML = randomQuote.quote;
+	document.getElementById("author").innerHTML = "- " + randomQuote.author;
 }
